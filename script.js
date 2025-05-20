@@ -11,8 +11,10 @@ async function loadJapanResults() {
         if (japanRace && japanRace.finishingOrder) {
             japanRace.finishingOrder.forEach((driver, index) => {
                 const row = resultsTableBody.insertRow();
-                const driverCell = row.insertCell();
                 const positionCell = row.insertCell();
+                const driverCell = row.insertCell();
+                const predictionCell = row.insertCell();
+                const userPointCell = row.insertCell();
 
                 positionCell.textContent = index + 1;
                 driverCell.textContent = driver;
